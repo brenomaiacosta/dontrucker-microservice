@@ -1,9 +1,16 @@
+server:
+  port: 8202
+
 spring:
   application:
     name: dt-user-service
-
-server:
-  port: 8202
+  data:
+    mongodb:
+      username: dontrucker
+      password: dontrucker
+      database: dontruckerdb
+      port: 27017
+      host: dt-mongo-database
 
 eureka:
   instance:

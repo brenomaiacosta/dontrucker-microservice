@@ -13,6 +13,10 @@ zuul:
       path: /v1/itemoffer/**
       serviceId: dt-itemoffer-service
       stripPrefix: false
+    dt-user-service:
+      path: /v1/user/**
+      serviceId: dt-user-service
+      stripPrefix: false
 
 eureka:
   instance:
