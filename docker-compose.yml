@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  dt-itemoffer-service:
+    networks:
+      - dt-network
+    build:
+      context: dt-discovery-service
+      dockerfile: dt-discovery-service/Dockerfile
+    ports:
+      - '8101:8101'
+
+networks:
+  dt-network:

@@ -21,6 +21,7 @@
 	<modules>
 		<module>dt-gateway-service</module>
 		<module>dt-discovery-service</module>
+		<module>dt-itemoffer-service</module>
 	</modules>
 
 	<dependencies>
