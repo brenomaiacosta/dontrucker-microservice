@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: dt-offer-service
+
+server:
+  port: 8201
+
+eureka:
+  instance:
+    preferUseIpAddress: true
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://dt-discovery-service:8101/eureka
+
