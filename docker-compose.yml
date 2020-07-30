@@ -1,6 +1,18 @@
 version: '3.8'
 
 services:
+  dt-mongo-database:
+    image: mongo
+    environment:
+      MONGO_INITDB_DATABASE: dontruckerdb
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: root
+    ports:
+      - '27017:27017'
+    volumes:
+      - D:\Resources\MongoDB\Volumes:/data/db
+    networks:
+      - dt-network
   dt-discovery-service:
     networks:
       - dt-network
@@ -27,6 +39,26 @@ services:
       dockerfile: Dockerfile
     ports:
       - '8200:8200'
+    depends_on:
+      - dt-discovery-service
+  dt-offer-service:
+    networks:
+      - dt-network
+    build:
+      context: dt-offer-service
+      dockerfile: Dockerfile
+    ports:
+      - '8201:8201'
+    depends_on:
+      - dt-discovery-service
+  dt-user-service:
+    networks:
+      - dt-network
+    build:
+      context: dt-user-service
+      dockerfile: Dockerfile
+    ports:
+      - '8202:8202'
     depends_on:
       - dt-discovery-service
 
