@@ -1,14 +1,34 @@
 version: '3.8'
 
 services:
-  dt-itemoffer-service:
+  dt-discovery-service:
     networks:
       - dt-network
     build:
       context: dt-discovery-service
-      dockerfile: dt-discovery-service/Dockerfile
+      dockerfile: Dockerfile
     ports:
       - '8101:8101'
+  dt-gateway-service:
+    networks:
+      - dt-network
+    build:
+      context: dt-gateway-service
+      dockerfile: Dockerfile
+    ports:
+      - '8100:8100'
+    depends_on:
+      - dt-discovery-service
+  dt-itemoffer-service:
+    networks:
+      - dt-network
+    build:
+      context: dt-itemoffer-service
+      dockerfile: Dockerfile
+    ports:
+      - '8200:8200'
+    depends_on:
+      - dt-discovery-service
 
 networks:
   dt-network:

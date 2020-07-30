@@ -6,7 +6,6 @@ spring:
     name: dt-gateway-service
 
 zuul:
-  sslHostnameValidationEnabled: false
   prefix: /api
   ignoredServices: '*'
   routes:
