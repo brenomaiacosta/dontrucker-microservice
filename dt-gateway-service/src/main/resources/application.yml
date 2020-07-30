@@ -1,0 +1,25 @@
+server:
+  port: 8100
+
+spring:
+  application:
+    name: dt-gateway-service
+
+zuul:
+  sslHostnameValidationEnabled: false
+  prefix: /api
+  ignoredServices: '*'
+  routes:
+    dt-itemoffer-service:
+      path: /v1/itemoffer/**
+      serviceId: dt-itemoffer-service
+      stripPrefix: false
+
+eureka:
+  instance:
+    preferUseIpAddress: true
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://dt-discovery-service:8101/eureka
