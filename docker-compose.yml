@@ -10,7 +10,7 @@ services:
     ports:
       - '27017:27017'
     volumes:
-      - D:\Resources\MongoDB\Volumes:/data/db
+      - mongodb_data:/data/db
     networks:
       - dt-network
   dt-mongo-express:
@@ -84,3 +84,7 @@ services:
 
 networks:
   dt-network:
+
+volumes:
+  mongodb_data:
+    driver: local

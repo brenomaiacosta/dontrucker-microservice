@@ -18,8 +18,12 @@ zuul:
       serviceId: dt-user-service
       stripPrefix: false
     dt-offer-service:
-      path: /v1/useroffer/**
+      path: /v1/offeruser/**
       serviceId: dt-offer-service
+      stripPrefix: false
+    dt-offertype-service:
+      path: /v1/offertype/**
+      serviceId: dt-offertype-service
       stripPrefix: false
 
 eureka:

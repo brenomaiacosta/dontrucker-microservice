@@ -21,7 +21,8 @@
 	<modules>
 		<module>dt-gateway-service</module>
 		<module>dt-discovery-service</module>
-		<module>dt-itemoffer-service</module>
+		<module>dt-offeritem-service</module>
+		<module>dt-offertype-service</module>
 		<module>dt-offer-service</module>
 		<module>dt-user-service</module>
 	</modules>
