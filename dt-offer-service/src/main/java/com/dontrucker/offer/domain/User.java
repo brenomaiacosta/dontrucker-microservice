@@ -16,5 +16,23 @@ public class User {
     private String alias;
     private String latitude;
     private String longitude;
-    private Integer rating;
+    private Double rating;
+
+    public User(String id, String alias, String latitude, String longitude, Double rating) {
+        this.id = id;
+        this.alias = alias;
+        this.latitude = latitude;
+        this.longitude = longitude;
+        this.rating = rating;
+    }
+
+    public User(String id, String name, String lastName, String alias, String latitude, String longitude, Double rating) {
+        this.id = id;
+        this.name = name;
+        this.lastName = lastName;
+        this.alias = alias;
+        this.latitude = latitude;
+        this.longitude = longitude;
+        this.rating = rating;
+    }
 }

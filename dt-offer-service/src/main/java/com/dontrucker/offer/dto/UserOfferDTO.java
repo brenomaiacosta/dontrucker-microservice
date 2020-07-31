@@ -11,11 +11,12 @@ import java.util.List;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class UserDTO {
+public class UserOfferDTO {
     private String id;
     private String alias;
-    private String rating;
     private String latitude;
     private String longitude;
+    private Double distance;
+    private Double rating;
     private List<OfferTypeCountDTO> offerTypeCountList;
 }

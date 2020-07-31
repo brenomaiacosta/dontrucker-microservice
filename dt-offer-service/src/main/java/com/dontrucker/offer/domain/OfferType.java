@@ -11,6 +11,6 @@ public class OfferType {
     @Id
     @Field("_id")
     private String id;
-    private String code;
+    private String icon;
     private String name;
 }
