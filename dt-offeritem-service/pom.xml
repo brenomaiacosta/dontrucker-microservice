@@ -11,7 +11,7 @@
 	<groupId>com.dontrucker</groupId>
 	<artifactId>itemoffer</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>dt-itemoffer-service</name>
+	<name>dt-offeritem-service</name>
 	<description>DonTrucker </description>
 
 	<dependencies>
