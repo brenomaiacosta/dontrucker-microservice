@@ -48,11 +48,11 @@ services:
       - '8100:8100'
     depends_on:
       - dt-discovery-service
-  dt-itemoffer-service:
+  dt-offeritem-service:
     networks:
       - dt-network
     build:
-      context: dt-itemoffer-service
+      context: dt-offeritem-service
       dockerfile: Dockerfile
     ports:
       - '8200:8200'
