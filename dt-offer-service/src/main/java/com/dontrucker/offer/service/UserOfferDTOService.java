@@ -1,7 +1,7 @@
 package com.dontrucker.offer.service;
 
 import com.dontrucker.offer.converter.impl.UserConverter;
-import com.dontrucker.offer.dto.OfferTypeCountDTO;
+import com.dontrucker.offer.domain.OfferType;
 import com.dontrucker.offer.dto.UserOfferDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -24,11 +24,11 @@ public class UserOfferDTOService {
     public List<UserOfferDTO> findAll(String latitude, String longitude) {
         List<UserOfferDTO> userOfferDTOList =  userConverter.toDTOList(userService.findAll());
         userOfferDTOList.stream().forEach(item -> {
-            List<OfferTypeCountDTO> offerTypeCountDTOList = new ArrayList<>();
-            offerTypeCountDTOList.add(new OfferTypeCountDTO("1", "mug-hot"));
-            offerTypeCountDTOList.add(new OfferTypeCountDTO("2","hamburger"));
-            offerTypeCountDTOList.add(new OfferTypeCountDTO("3","apple-alt"));
-            item.setOfferTypeCountList(offerTypeCountDTOList);
+            List<OfferType> offerTypeDTOList = new ArrayList<>();
+            offerTypeDTOList.add(new OfferType("1", "mug-hot", "Café"));
+            offerTypeDTOList.add(new OfferType("2","hamburger", "Hamburger"));
+            offerTypeDTOList.add(new OfferType("3","apple-alt", "Ftruta"));
+            item.setOfferTypeList(offerTypeDTOList);
             item.setDistance(Double.valueOf(random.nextInt(high - low) + low));
         });
         return userOfferDTOList;

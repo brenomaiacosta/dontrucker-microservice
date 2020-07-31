@@ -6,9 +6,9 @@ spring:
     name: dt-user-service
   data:
     mongodb:
-      username: dontrucker
-      password: dontrucker
-      database: dontruckerdb
+      username: root
+      password: root
+      database: admin
       port: 27017
       host: dt-mongo-database
 

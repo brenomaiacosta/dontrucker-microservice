@@ -14,6 +14,8 @@ public class User {
     private String name;
     private String lastName;
     private String alias;
+    private String username;
+    private String password;
     private String latitude;
     private String longitude;
     private Double rating;

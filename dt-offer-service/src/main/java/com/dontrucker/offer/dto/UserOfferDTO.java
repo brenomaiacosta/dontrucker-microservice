@@ -1,5 +1,6 @@
 package com.dontrucker.offer.dto;
 
+import com.dontrucker.offer.domain.OfferType;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -18,5 +19,5 @@ public class UserOfferDTO {
     private String longitude;
     private Double distance;
     private Double rating;
-    private List<OfferTypeCountDTO> offerTypeCountList;
+    private List<OfferType> offerTypeList;
 }
