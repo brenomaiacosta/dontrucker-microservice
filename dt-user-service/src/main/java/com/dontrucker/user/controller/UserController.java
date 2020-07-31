@@ -25,4 +25,10 @@ public class UserController {
     public List<User> findAll() {
         return userService.findAll();
     }
+
+    @ResponseStatus(HttpStatus.OK)
+    @RequestMapping(path = "/findByUsernameAndPassword", method = RequestMethod.POST)
+    public User findByUsernameAndPassword(@RequestBody User user) {
+        return userService.findByUsernameAndPassword(user.getUsername(), user.getPassword());
+    }
 }
